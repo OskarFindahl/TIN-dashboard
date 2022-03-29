@@ -1,0 +1,4 @@
+djangorestframework==3.13.1
+scrapinghub==2.4.0
+scrapy==2.6.1
+requests==2.27.1
