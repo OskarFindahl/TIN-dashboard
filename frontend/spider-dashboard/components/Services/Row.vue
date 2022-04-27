@@ -27,17 +27,25 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 const props = defineProps(["spider"]);
 let numberOfDots = 90;
 let spiderName = props.spider.id;
 spiderName = spiderName[0].toUpperCase() + spiderName.substring(1);
 
-const { data } = await useFetch(
+interface JobData {
+  id: string,
+  num_errors: number,
+  num_items: number,
+  date: string,
+  spider: String,
+}
+
+const { data: response } = await useFetch<JobData[]>(
   `http://localhost:8000/zyte/job-data?spider=${props.spider.id}`
 );
 
-let jobs = data._value;
+let jobs = response.value;
 
 const extraFillDots =
   numberOfDots - jobs.length < 0 ? 0 : numberOfDots - jobs.length;
@@ -72,6 +80,15 @@ if (faultPercentage < 40) {
 }
 </script>
 
+<style>
+  .dotWrapper:nth-last-child(-n+70) {
+    @apply hidden sm:block;
+  }
+  .dotWrapper:nth-last-child(-n+50) {
+    @apply hidden lg:block;
+  }
+</style>
+
 <style scoped>
 .dot-wrapper {
   display: flex;
@@ -104,12 +121,14 @@ h3 {
 .title-wrapper {
   display: flex;
   justify-content: space-between;
+  @apply flex-col sm:flex-row
 }
 
 .status-wrapper {
   display: flex;
   justify-content: left;
   width: 120px;
+
 }
 
 .status-animation-ok {
