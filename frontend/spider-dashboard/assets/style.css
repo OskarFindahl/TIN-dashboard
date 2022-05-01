@@ -1,0 +1,17 @@
+.card {
+    background: #fff;
+    padding: 60px;
+    box-shadow: 0 20px 60px rgb(0 0 0 / 10%);
+    border-radius: 6px;
+    color: #131a26;
+}
+.wrapper {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1000px;
+}
+h1 {
+    @apply text-2xl font-bold;
+    font-family: "Roboto", sans-serif;
+
+}
