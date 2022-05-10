@@ -20,6 +20,10 @@ Apply migrations
 ```
 py manage.py migrate
 ```
+Seed database with mock data.
+```
+py manage.py loaddata data.json
+```
 Run server
 ```
 py manage.py runserver
