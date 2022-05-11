@@ -18,7 +18,7 @@ BOT_NAME = 'tin_scraper'
 SPIDER_MODULES = ['tin_scraper.spiders']
 NEWSPIDER_MODULE = 'tin_scraper.spiders'
 
-API_ROOT = "http://"
+API_ROOT = "http://localhost:8000"
 
 LOG_LEVEL = 'INFO'
 
