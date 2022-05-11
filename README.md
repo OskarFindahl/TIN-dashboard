@@ -3,8 +3,11 @@
 ## REST API Documentation.
 You must run backend server to access api documentation.
 Follow steps in [backend setup](#backend).
-Documentation for API can then be found in read-able format at `http://localhost:8000/swagger/`.
-And in open-api format on: `http://localhost:8000/swagger/?format=openapi`
+Documentation for API can then be found in read-able format at [http://localhost:8000/swagger/](http://localhost:8000/swagger/).
+And in open-api format on: [http://localhost:8000/swagger/?format=openapi](http://localhost:8000/swagger/?format=openapi)
+
+## Database structure
+ER-diagram can be found in root folder `er-diagram.png`
 
 ## Setup guide
 
@@ -36,7 +39,8 @@ py manage.py runserver
 ```
 
 ### Scraper
-> Can only run with api-key. Set in local_settings.py
+Can only run with api-key. Set in local_settings.py.
+For demonstration purposes, you can instead seed database with instructions under [backend setup](#backend).
 ```
 cd scraper
 ```
