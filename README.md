@@ -1,8 +1,14 @@
 # TIN Dashboard
 
+## REST API Documentation.
+You must run backend server to access api documentation.
+Follow steps in [backend setup](#backend).
+Documentation for API can then be found in read-able format at `http://localhost:8000/swagger/`.
+And in open-api format on: `http://localhost:8000/swagger/?format=openapi`
+
 ## Setup guide
 
-### Backend
+### Backend{#backend}
 ```
 cd backend
 ```
