@@ -8,7 +8,7 @@ And in open-api format on: `http://localhost:8000/swagger/?format=openapi`
 
 ## Setup guide
 
-### Backend{#backend}
+### Backend {#backend}
 ```
 cd backend
 ```
