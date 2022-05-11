@@ -13,13 +13,20 @@ class ZyteSpider(scrapy.Spider):
         self.project = None
         super().__init__(*args, **kwargs)
 
+    
+    def start_requests(self):
+        """ Initial request for scrapy to perform.
+        Load settings and initialize ScrapingHubClient.
 
-    def start_requests(self):        
-        apikey = self.settings["SCRAPINGHUB_API_KEY"] 
+        Yields:
+            _type_: _description_
+        """''
+        apikey = self.settings["SCRAPINGHUB_API_KEY"]
+        self.root = self.settings["API_ROOT"]
         self.client = ScrapinghubClient(apikey)
         self.project = self.client.get_project(self.settings["SCRAPINGHUB_PROJECT_ID"])
 
-        # Workaround
+        # Workaround, we do not need to make any request so we send a mock one and ignore it.
         yield scrapy.Request(url="http://localhost", meta={"ignore_request": True})
 
     def parse(self, response):
