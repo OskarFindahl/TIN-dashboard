@@ -72,3 +72,5 @@ Run server
 ```
 npm run dev
 ```
+
+![author](https://i.imgur.com/HJniXiJ.jpeg)
