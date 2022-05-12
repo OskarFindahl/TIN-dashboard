@@ -139,7 +139,7 @@ h3 {
   width: 12px;
   transform: scale(1);
   animation: pulse-ok 2s infinite;
-  margin: auto 15px 23px 0px;
+  margin: auto 15px 10px 0px;
 }
 
 .status-animation-warning {
@@ -150,7 +150,7 @@ h3 {
   width: 12px;
   transform: scale(1);
   animation: pulse-warning 2s infinite;
-  margin: auto 15px 23px 0px;
+  margin: auto 15px 10px 0px;
 }
 
 .status-animation-error {
@@ -161,7 +161,7 @@ h3 {
   width: 12px;
   transform: scale(1);
   animation: pulse-error 2s infinite;
-  margin: auto 15px 23px 0px;
+  margin: auto 15px 10px 0px;
 }
 
 @keyframes pulse-ok {
