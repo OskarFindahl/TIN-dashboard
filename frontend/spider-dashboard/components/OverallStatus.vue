@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="status-wrapper">
     <div class="card">
       <div class="status-animation-ok" :class="animationType"></div>
       <h1>OverallStatus</h1>
@@ -12,6 +12,15 @@
 
 <style scoped>
 
+.status-wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  max-width: 1000px; 
+  width: -webkit-fill-available;
+  margin: -80px auto 67px auto;
+  padding: 20px;
+}
 .status-animation-ok {
   background: rgba(59, 214, 113, 1);
   border-radius: 50%;
@@ -24,7 +33,7 @@
 }
 .card{
   @apply flex items-center;
-  @apply flex-col sm:flex-row
+  @apply flex-col sm:flex-row;
 }
 
 @keyframes pulse-ok {
