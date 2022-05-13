@@ -61,7 +61,7 @@ scrapy crawl zyte_spider
 
 ### Frontend
 ```
-cd frontend
+cd frontend/spider-dashboard
 ```
 
 Install dependencies.
