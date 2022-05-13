@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="background-wrapper">
     <div class="text-wrapper">
       <h1>TIN-Dashboard</h1>
       <p>Service Status</p>
@@ -11,7 +11,7 @@
 </script>
 
 <style scoped>
-.wrapper {
+.background-wrapper {
   background-color: #131a26;
   width: 100%;
   height: 200px;
@@ -26,10 +26,14 @@ p {
 }
 
 .text-wrapper {
-  padding: 60px 190px 0px 190px;
+  padding: 48px;
+  margin: auto;
+  max-width: 1100px;
   display: flex;
   color: white;
   justify-content: space-between;
   font-family: "Roboto", sans-serif;
+  @apply flex items-center;
+  @apply flex-col sm:flex-row;
 }
 </style>
